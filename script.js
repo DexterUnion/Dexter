@@ -5,6 +5,8 @@ const startPrankButton = document.getElementById("startPrank");
 const prankAudio = document.getElementById("prankAudio");
 const matrixCanvas = document.getElementById("matrixRain");
 const ctx = matrixCanvas.getContext("2d");
+const consoleDiv = document.getElementById("console");
+const countdownElement = document.getElementById("countdown");
 
 // Start prank when "OK" button is clicked
 startPrankButton.addEventListener("click", () => {
@@ -16,6 +18,12 @@ startPrankButton.addEventListener("click", () => {
 
     // Play prank audio
     prankAudio.play();
+
+    // Start typing commands
+    typeCommands();
+
+    // Start countdown timer
+    startCountdown();
 });
 
 // Matrix Rain Animation
@@ -47,3 +55,34 @@ function drawMatrixRain() {
 }
 
 setInterval(drawMatrixRain, 33); // Adjust speed of rain
+
+// Typing commands
+let commands = [
+    "Accessing system...",
+    "Uploading data to secret server...",
+    "Cracking password...",
+    "Injecting malware..."
+];
+let index = 0;
+
+function typeCommands() {
+    if (index < commands.length) {
+        const p = document.createElement("p");
+        p.textContent = commands[index++];
+        consoleDiv.appendChild(p);
+        setTimeout(typeCommands, 1500); // Adjust typing speed
+    }
+}
+
+// Countdown Timer
+let timeLeft = 10;
+
+function startCountdown() {
+    const interval = setInterval(() => {
+        countdownElement.textContent = `Time left: ${timeLeft--} seconds`;
+        if (timeLeft < 0) {
+            clearInterval(interval);
+            countdownElement.textContent = "Upload Complete!";
+        }
+    }, 1000);
+}
