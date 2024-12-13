@@ -57,7 +57,6 @@ const commands = [
     "> We Have Covered Your Cyber Space",
     "> Be Ready For Cyber War",
     "> We Will Come And Make",
-    "> Hacked by Dexter",
     "> Fuck You!",
     "> Motherf#cker"
 ];
