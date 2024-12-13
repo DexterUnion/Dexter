@@ -64,3 +64,29 @@ function startCountdown() {
         }
     }, 1000);
 }
+
+
+const consoleDiv = document.getElementById("console");
+const commands = [
+    "> Accessing system files...",
+    "> Extracting sensitive data...",
+    "> Uploading to dark web...",
+    "> Activating trojans..."
+];
+
+let commandIndex = 0;
+
+function showCommands() {
+    if (commandIndex < commands.length) {
+        const p = document.createElement("p");
+        p.textContent = commands[commandIndex++];
+        consoleDiv.appendChild(p);
+        consoleDiv.scrollTop = consoleDiv.scrollHeight; // Auto-scroll
+        setTimeout(showCommands, 1000); // Display each command after 1 second
+    }
+}
+
+startPrankButton.addEventListener("click", () => {
+    // Start showing commands
+    showCommands();
+});
