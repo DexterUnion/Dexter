@@ -5,7 +5,6 @@ const startPrankButton = document.getElementById("startPrank");
 const prankAudio = document.getElementById("prankAudio");
 const matrixCanvas = document.getElementById("matrixRain");
 const ctx = matrixCanvas.getContext("2d");
-const consoleDiv = document.getElementById("console");
 const countdownElement = document.getElementById("countdown");
 
 // Start prank when "OK" button is clicked
@@ -18,9 +17,6 @@ startPrankButton.addEventListener("click", () => {
 
     // Play prank audio
     prankAudio.play();
-
-    // Start typing commands
-    typeCommands();
 
     // Start countdown timer
     startCountdown();
@@ -55,24 +51,6 @@ function drawMatrixRain() {
 }
 
 setInterval(drawMatrixRain, 33); // Adjust speed of rain
-
-// Typing commands
-const commands = [
-    "Accessing system files...",
-    "Extracting sensitive data...",
-    "Uploading to dark web...",
-    "Activating trojans..."
-];
-let commandIndex = 0;
-
-function typeCommands() {
-    if (commandIndex < commands.length) {
-        const p = document.createElement("p");
-        p.textContent = `>> ${commands[commandIndex++]}`;
-        consoleDiv.appendChild(p);
-        setTimeout(typeCommands, 1500);
-    }
-}
 
 // Countdown Timer
 let timeLeft = 10;
