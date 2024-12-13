@@ -5,7 +5,6 @@ const startPrankButton = document.getElementById("startPrank");
 const prankAudio = document.getElementById("prankAudio");
 const matrixCanvas = document.getElementById("matrixRain");
 const ctx = matrixCanvas.getContext("2d");
-const countdownElement = document.getElementById("countdown");
 
 // Start prank when "OK" button is clicked
 startPrankButton.addEventListener("click", () => {
