@@ -32,8 +32,8 @@ matrixCanvas.height = window.innerHeight;
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@#$%^&*()";
 const fontSize = 16;
-const columns = matrixCanvas.width / fontSize;
-const drops = Array(Math.floor(columns)).fill(1);
+const columns = Math.floor(matrixCanvas.width / fontSize);
+const drops = Array(columns).fill(1);
 
 function drawMatrixRain() {
     ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
@@ -57,20 +57,20 @@ function drawMatrixRain() {
 setInterval(drawMatrixRain, 33); // Adjust speed of rain
 
 // Typing commands
-let commands = [
-    "Accessing system...",
-    "Uploading data to secret server...",
-    "Cracking password...",
-    "Injecting malware..."
+const commands = [
+    "Accessing system files...",
+    "Extracting sensitive data...",
+    "Uploading to dark web...",
+    "Activating trojans..."
 ];
-let index = 0;
+let commandIndex = 0;
 
 function typeCommands() {
-    if (index < commands.length) {
+    if (commandIndex < commands.length) {
         const p = document.createElement("p");
-        p.textContent = commands[index++];
+        p.textContent = `>> ${commands[commandIndex++]}`;
         consoleDiv.appendChild(p);
-        setTimeout(typeCommands, 1500); // Adjust typing speed
+        setTimeout(typeCommands, 1500);
     }
 }
 
