@@ -139,3 +139,12 @@ body {
     0% { width: 0; }
     100% { width: 100%; }
 }
+
+         #landing {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    height: 100vh;          /* Full viewport height */
+    position: relative;     /* Ensure it stays in position */
+    z-index: 2;             /* Keep it above the canvas */
+         }
