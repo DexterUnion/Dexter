@@ -132,12 +132,3 @@ body {
     0% { width: 0; }
     100% { width: 100%; }
 }
-
-         #landing {
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-    height: 100vh;          
-    position: relative;   
-    z-index: 2;           
-         }
