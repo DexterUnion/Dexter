@@ -52,20 +52,6 @@ function drawMatrixRain() {
 
 setInterval(drawMatrixRain, 33); // Adjust speed of rain
 
-// Countdown Timer
-let timeLeft = 10;
-
-function startCountdown() {
-    const interval = setInterval(() => {
-        countdownElement.textContent = `Time left: ${timeLeft--} seconds`;
-        if (timeLeft < 0) {
-            clearInterval(interval);
-            countdownElement.textContent = "Upload Complete!";
-        }
-    }, 1000);
-}
-
-
 const consoleDiv = document.getElementById("console");
 const commands = [
     "> Accessing system files...",
