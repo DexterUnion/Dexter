@@ -59,6 +59,7 @@ const commands = [
     "> We Will Come And Make"
     "> Fuck You!"
     "> Motherf#cker"
+
 ];
 
 let commandIndex = 0;
