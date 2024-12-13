@@ -58,7 +58,7 @@ const commands = [
     "> Be Ready For Cyber War",
     "> We Will Come And Make",
     "> Hacked by Dexter",
-    "> Fuck You Motherf#cker"
+    "> We Do Not Forgive / Forgive"
 ];
 
 let commandIndex = 0;
