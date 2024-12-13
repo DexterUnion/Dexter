@@ -1,4 +1,4 @@
-// Get the elements
+
 const landing = document.getElementById("landing");
 const hacked = document.getElementById("hacked");
 const startPrankButton = document.getElementById("startPrank");
@@ -6,27 +6,22 @@ const prankAudio = document.getElementById("prankAudio");
 const matrixCanvas = document.getElementById("matrixRain");
 const ctx = matrixCanvas.getContext("2d");
 
-// Check if canvas context is initialized
 if (!ctx) {
     console.error("Failed to initialize canvas context.");
 }
 
-// Start prank when "OK" button is clicked
 startPrankButton.addEventListener("click", () => {
-    // Hide the landing page
+    
     landing.classList.add("hidden");
 
-    // Show the hacked section
+    
     hacked.classList.remove("hidden");
 
-    // Play prank audio
     prankAudio.play();
 
-    // Start showing commands
     showCommands();
 });
 
-// Matrix Rain Animation
 matrixCanvas.width = window.innerWidth;
 matrixCanvas.height = window.innerHeight;
 
@@ -54,9 +49,8 @@ function drawMatrixRain() {
     }
 }
 
-setInterval(drawMatrixRain, 33); // Adjust speed of rain
+setInterval(drawMatrixRain, 33);
 
-// Console commands for hacked section
 const consoleDiv = document.getElementById("console");
 const commands = [
     "> This Is A Warning Message...",
@@ -74,7 +68,7 @@ function showCommands() {
         const p = document.createElement("p");
         p.textContent = commands[commandIndex++];
         consoleDiv.appendChild(p);
-        consoleDiv.scrollTop = consoleDiv.scrollHeight; // Auto-scroll
-        setTimeout(showCommands, 1000); // Display each command after 1 second
+        consoleDiv.scrollTop = consoleDiv.scrollHeight;
+        setTimeout(showCommands, 1000); 
     }
 }
