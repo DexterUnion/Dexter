@@ -29,9 +29,8 @@ body {
 .hacked-text {
     font-size: 2.8em;
     color: #ff0000;
-    font-family: 'Creepster', cursive;
-    animation: glitchEffect 0.7s infinite;
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff4500, 0 0 30px red;
+    text-shadow: none; /* Removes the glow effect */
+    animation: glitchEffect 0.7s infinite; /* Keeps the glitch effect */
 }
 
 /* Stylish Button */
