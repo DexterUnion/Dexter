@@ -53,10 +53,12 @@ setInterval(drawMatrixRain, 33); // Adjust speed of rain
 
 const consoleDiv = document.getElementById("console");
 const commands = [
-    "> Accessing system files...",
-    "> Extracting sensitive data...",
-    "> Uploading to dark web...",
-    "> Activating trojans..."
+    "> This Is A Warning Message...",
+    "> We Have Covered Your Cyber Space",
+    "> Be Ready For Cyber War",
+    "> We Will Come And Make"
+    "> Fuck You!"
+    "> Motherf#cker"
 ];
 
 let commandIndex = 0;
