@@ -6,6 +6,11 @@ const prankAudio = document.getElementById("prankAudio");
 const matrixCanvas = document.getElementById("matrixRain");
 const ctx = matrixCanvas.getContext("2d");
 
+// Check if canvas context is initialized
+if (!ctx) {
+    console.error("Failed to initialize canvas context.");
+}
+
 // Start prank when "OK" button is clicked
 startPrankButton.addEventListener("click", () => {
     // Hide the landing page
@@ -17,8 +22,8 @@ startPrankButton.addEventListener("click", () => {
     // Play prank audio
     prankAudio.play();
 
-    // Start countdown timer
-    startCountdown();
+    // Start showing commands
+    showCommands();
 });
 
 // Matrix Rain Animation
@@ -51,15 +56,15 @@ function drawMatrixRain() {
 
 setInterval(drawMatrixRain, 33); // Adjust speed of rain
 
+// Console commands for hacked section
 const consoleDiv = document.getElementById("console");
 const commands = [
     "> This Is A Warning Message...",
     "> We Have Covered Your Cyber Space",
     "> Be Ready For Cyber War",
-    "> We Will Come And Make"
-    "> Fuck You!"
+    "> We Will Come And Make",
+    "> Fuck You!",
     "> Motherf#cker"
-
 ];
 
 let commandIndex = 0;
@@ -73,8 +78,3 @@ function showCommands() {
         setTimeout(showCommands, 1000); // Display each command after 1 second
     }
 }
-
-startPrankButton.addEventListener("click", () => {
-    // Start showing commands
-    showCommands();
-});
