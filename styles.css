@@ -17,19 +17,31 @@ body {
     z-index: 2;
 }
 
-button {
-    padding: 10px 20px;
+/* Stylish Text for Heading */
+.stylish-text {
+    font-size: 2.5em;
+    color: red;
+    text-shadow: 0 0 10px red, 0 0 20px darkred;
+    animation: flicker 1.5s infinite alternate;
+}
+
+/* Stylish Button */
+.stylish-button {
+    padding: 15px 30px;
     font-size: 20px;
-    background-color: red;
+    font-weight: bold;
+    background: linear-gradient(90deg, red, darkred);
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
-    box-shadow: 0 0 10px red;
+    border-radius: 10px;
+    box-shadow: 0 0 20px red;
+    animation: pulse 2s infinite;
 }
 
-button:hover {
-    background-color: darkred;
+.stylish-button:hover {
+    background: linear-gradient(90deg, darkred, black);
+    box-shadow: 0 0 25px yellow;
 }
 
 /* Hacked section styles */
@@ -48,7 +60,7 @@ button:hover {
 .hacked-text {
     font-size: 2.5em;
     color: red;
-    animation: shake 0.5s infinite;
+    animation: glitchEffect 0.7s infinite;
 }
 
 .warning {
@@ -71,6 +83,25 @@ button:hover {
     animation: loading 5s linear forwards;
 }
 
+/* Console styles */
+#console {
+    background: black;
+    color: green;
+    font-family: monospace;
+    padding: 20px;
+    width: 80%;
+    height: 200px;
+    overflow-y: auto;
+    margin: 20px auto;
+    border: 2px solid green;
+}
+
+/* Countdown styles */
+#countdown {
+    font-size: 1.5em;
+    color: yellow;
+}
+
 /* Matrix Rain Animation */
 #matrixRain {
     position: absolute;
@@ -83,16 +114,30 @@ button:hover {
 }
 
 /* Animations */
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.5; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 @keyframes glitch {
     0%, 100% { filter: none; }
     50% { filter: hue-rotate(90deg); }
+}
+
+@keyframes glitchEffect {
+    0% { clip: rect(42px, 9999px, 44px, 0); transform: skew(0.3deg); }
+    20% { clip: rect(10px, 9999px, 85px, 0); transform: skew(0.5deg); }
+    40% { clip: rect(70px, 9999px, 100px, 0); transform: skew(-0.4deg); }
+    60% { clip: rect(20px, 9999px, 35px, 0); transform: skew(0.3deg); }
+    80% { clip: rect(50px, 9999px, 95px, 0); transform: skew(-0.2deg); }
+    100% { clip: rect(30px, 9999px, 55px, 0); transform: skew(0deg); }
 }
 
 @keyframes loading {
