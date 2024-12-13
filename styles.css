@@ -1,0 +1,96 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 10px red;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+/* Hacked section styles */
+#hacked {
+    text-align: center;
+}
+
+.hacked-logo img {
+    width: 150px;
+    margin-bottom: 20px;
+    animation: glitch 1s infinite;
+}
+
+.hacked-text {
+    font-size: 2em;
+    color: red;
+    animation: shake 0.5s infinite;
+}
+
+.warning {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.progress-bar {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #444;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0;
+    height: 20px;
+    background-color: red;
+    animation: loading 5s linear forwards;
+}
+
+.funny-warning {
+    font-size: 1.5em;
+    color: green;
+    margin-top: 20px;
+}
+
+/* Animations */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+@keyframes glitch {
+    0%, 100% { filter: none; }
+    50% { filter: hue-rotate(90deg); }
+}
+
+@keyframes loading {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
