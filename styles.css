@@ -117,19 +117,7 @@ body {
     background: black;
 }
 
-/* Animations */
-@keyframes flicker {
-    0% { opacity: 1; }
-    50% { opacity: 0.7; }
-    100% { opacity: 0.4; }
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-
+/* Glitch Animations */
 @keyframes glitch {
     0%, 100% { filter: none; }
     50% { filter: hue-rotate(90deg); }
@@ -144,6 +132,7 @@ body {
     100% { clip: rect(60px, 9999px, 55px, 0); transform: skew(0deg); }
 }
 
+/* Virus Animations */
 @keyframes loading {
     0% { width: 0; }
     100% { width: 100%; }
