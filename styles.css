@@ -28,11 +28,11 @@ body {
 
 .hacked-text {
     font-size: 2.8em;
-    color: #ff0000;
-    text-shadow: none; /* Removes the glow effect */
-    animation: glitchEffect 0.7s infinite; /* Keeps the glitch effect */
+    color: #ff0000; /* Solid red color */
+    text-shadow: none !important; /* Ensure no glow or shadow is applied */
+    animation: none !important; /* Disable all animations if needed */
+    font-weight: bold; /* Make it bold for better visibility */
 }
-
 /* Stylish Button */
 .stylish-button {
     padding: 15px 40px;
